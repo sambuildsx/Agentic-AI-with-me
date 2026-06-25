@@ -76,3 +76,18 @@ result = tool.invoke({
 
 print(result)
 
+###custom function in agent
+def multiply (a: int, b: int) -> int:
+    '''
+    Multiplies a and b 
+    args:
+    a(int): The first number to multiply.
+    b(int): The second number to multiply.
+
+    result:
+    int: output int
+
+    '''
+
+tools=[tool, multiply]
+llm_with_tools=llm.bind_tools(tools)
