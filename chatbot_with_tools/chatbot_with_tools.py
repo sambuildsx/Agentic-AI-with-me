@@ -63,7 +63,7 @@ graph = graph_builder.compile()
 res = graph.invoke({'messages':'divide 9 by 3'})
 
 
-print (res)
+print(res)
 
 print(res['messages'][-1].content)
 
