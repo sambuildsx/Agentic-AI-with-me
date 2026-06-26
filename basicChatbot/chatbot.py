@@ -24,11 +24,12 @@ graph_builder = StateGraph(State)
 
 #adding node
 graph_builder.add_node("llmChatbot" , chatbot)
+
 #adding edges
 graph_builder.add_edge(START,"llmChatbot")
 graph_builder.add_edge("llmChatbot" , END)
 
-
+#compiler
 graph = graph_builder.compile()
 
 res = graph.invoke({'messages':'hi'})
